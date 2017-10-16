@@ -1,0 +1,99 @@
+How to remove duplicate integers
+int[] input = new int[]{1, 1, 3, 7, 7, 8, 9, 9, 9, 10};
+  int current = input[0];
+  boolean found = false;
+  for (int i = 0; i < input.length; i++) {
+      if (current == input[i] && !found) {
+          found = true;
+      } else if (current != input[i]) {
+          System.out.print(" " + current);
+          current = input[i];
+          found = false;
+      }
+  }
+  System.out.print(" " + current);
+ }
+}
+
+How to remove a duplicate from a string
+public static void main(String[] args) { 
+  /*String string = "World";
+  char[] chars = string.toCharArray();
+  Set<Character> charSet = new LinkedHashSet<Character>();
+  for (char c : chars) {
+      charSet.add(c);
+  }
+  StringBuilder sb = new StringBuilder();
+  for (Character character : charSet) {
+      sb.append(character);
+  }
+  System.out.println(sb.toString());
+ }
+}*/OR OR
+//////////////////////////////
+  
+  String s = "Hassan";
+        String s2 = "" ;{
+        for (int i = 0; i < s.length(); i++) {
+            Boolean found = false;
+            for (int j = 0; j < s2.length(); j++) {
+                if (s.charAt(i) == s2.charAt(j)) {
+                    found = true;
+                    break; //don't need to iterate further
+                }
+            }
+            if (found == false) {
+                s2 = s2.concat(String.valueOf(s.charAt(i)));
+            }
+        }
+        System.out.println(s2 +" ");
+    }
+}
+}
+how to reverse a string
+public class rever
+{
+ static void reverseEverything(String s)
+ {
+  String[] words = s.split(" ");
+  String reverseString = "";
+  for (int i = 0; i < words.length; i++)
+  {
+   String word = words[i];
+   String reverseWord = "";
+   for (int k = word.length() - 1; k >= 0; k--)
+   {
+    reverseWord = reverseWord + word.charAt(k);
+   }
+   reverseString =  reverseWord + " "+reverseString;
+  }
+  System.out.println(s);
+  System.out.println(reverseString);
+  System.out.println("-------------------------");
+ }
+ public static void main(String[] args)
+ {
+  reverseEverything("hope you are doing well");
+ }
+}
+
+How to find duplicate/common/repeating element
+public class rever {
+    
+     public static void main(String[] args) 
+     {
+         String[] strArray = {"1,2,3", "1,2,3", "1,2,5", "1,2,8", "1,11,9", "1,12,5", "1,2,4"};
+  
+         for (int i = 0; i < strArray.length-1; i++)
+         {
+             for (int j = i+1; j < strArray.length; j++)
+             {
+                 if( (strArray[i].equals(strArray[j])) && (i != j) )
+                 {
+                     System.out.println("Duplicate Element is : "+strArray[j]);
+                 }
+             }
+         }
+     }
+}
+     
